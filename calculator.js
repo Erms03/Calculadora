@@ -33,6 +33,9 @@ const handleNumberScreen = (number) => {
 
 numberButtons.forEach(button => {
     button.addEventListener('click', (e) => {
+        if(numberChoice.result) {
+            handleClear();
+        }
         const number = e.target.textContent;
         if (numberChoice.operation) {
             handleNumberScreen(number);
