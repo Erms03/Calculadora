@@ -46,6 +46,7 @@ numberButtons.forEach(button => {
 
 operationButtons.forEach(button => {
     button.addEventListener('click', (e) => {
+        if(numberChoice.operation) return;
         numberChoice.operation = e.target.textContent;
         screen.textContent = '0';
     });
